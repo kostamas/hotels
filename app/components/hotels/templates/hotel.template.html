@@ -1,0 +1,82 @@
+<div class="hotel">
+    <h1>{{$ctrl.hotel.name}} Hotel</h1>
+
+    <div class="buttons-wrapper">
+        <div class="back-to-hotel-list" ui-sref="hotelList">Back to hotel list</div>
+        <div class="save-changes" ng-click="$ctrl.save()">SAVE CHANGES</div>
+        <div class="progress-circular-wrapper" ng-if="$ctrl.activated">
+            <md-progress-circular ng-disabled="!$ctrl.activated" class="md-hue-2"
+                                  md-diameter="30px"></md-progress-circular>
+        </div>
+    </div>
+
+    <div class="list-wrapper">
+        <md-list flex>
+
+            <p class="data-type">Description</p>
+            <md-list-item layout="column" layout-align="start">
+                <div class="item-data"><span>Description</span>: {{$ctrl.hotel.description}}
+                    <span class="edit-hotel"> edit: <input ng-model="$ctrl.hotel.description"></span>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+
+            <p class="data-type">Address</p>
+            <md-list-item layout="column" layout-align="start">
+                <div class="item-data"><span>Address:</span> {{$ctrl.hotel.address.address}}
+                    <span class="edit-hotel"> edit: <input ng-model="$ctrl.hotel.address.address"></span>
+                </div>
+                <div class="item-data"><span>City: </span>{{$ctrl.hotel.address.city}}
+                    <span class="edit-hotel"> edit: <input ng-model="$ctrl.hotel.address.city"></span>
+                </div>
+                <div class="item-data"><span>Country:</span> {{$ctrl.hotel.address.country}}
+                    <span class="edit-hotel"> edit: <input ng-model="$ctrl.hotel.address.country"></span>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+
+            <p class="data-type">Details</p>
+            <md-list-item layout="column" layout-align="start">
+                <div class="item-data"><span>Brand:</span> {{$ctrl.hotel.details.brand.txt}}
+                    <span class="edit-hotel"> edit: <input ng-model="$ctrl.hotel.details.brand.txt"></span>
+                </div>
+                <div class="item-data"><span>CheckIn: </span>{{$ctrl.hotel.details.checkIn}}
+                    <span class="edit-hotel"> edit: <input ng-model="$ctrl.hotel.details.brand.txt"></span>
+                </div>
+                <div class="item-data"><span>CheckOut: </span>{{$ctrl.hotel.details.checkOut}}
+                    <span class="edit-hotel"> edit: <input ng-model="$ctrl.hotel.details.checkOut"></span>
+                </div>
+                <div class="item-data"><span>Currency:</span> {{$ctrl.hotel.details.currency}}
+                    <span class="edit-hotel"> edit: <input ng-model="$ctrl.hotel.details.currency"></span>
+                </div>
+                <div class="item-data"><span>NumOfRooms:</span> {{$ctrl.hotel.details.numOfRooms}}
+                    <span class="edit-hotel"> edit: <input ng-model="$ctrl.hotel.details.numOfRooms"></span>
+                </div>
+                <div class="item-data"><span>StarRating:</span> {{$ctrl.hotel.details.starRating.txt}}
+                    <span class="edit-hotel"> edit: <input ng-model="$ctrl.hotel.details.starRating.txt"></span>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+
+            <p class="data-type">Amenities</p>
+            <md-list-item layout="column" layout-align="start">
+                <div class="item-data" ng-repeat="amenity in $ctrl.hotel.amenities">
+                    <span>{{$index}}. </span> {{amenity.txt}}
+
+                    <span class="edit-hotel"> edit: <input ng-model="amenity.txt"></span>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+
+            <p class="data-type">Image</p>
+            <md-list-item layout="column">
+                <div class="img-wrapper"
+                     ng-style="{width: $ctrl.hotel.images[0].width + 'px', height: $ctrl.hotel.images[0].height + 'px'}">
+                    <img class="hotel-image"
+                         ng-src="{{$ctrl.hotel.images[0].url}}">
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+        </md-list>
+    </div>
+</div>

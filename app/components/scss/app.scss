@@ -1,0 +1,28 @@
+body {
+  font-family: "Lato Light" ;
+  background: url("/app/assets/img-background.jpeg") no-repeat center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body.hotel{
+  background: url("/app/assets/hotel-background.jpeg") no-repeat center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body * {
+  ::-webkit-scrollbar,
+  &::-webkit-scrollbar {
+    width: 9px;
+    background-color: #c7cbc4;
+    border-radius: 100px;
+  }
+  ::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-thumb {
+    background-color: gray;
+    -webkit-border-radius: 1ex;
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="app/css/hotels/scss/hotel.css">
+    <link rel="stylesheet" type="text/css" href="app/css/hotels/scss/hotelList.css">
+    <link rel="stylesheet" type="text/css" href="app/css/app.css">
+</head>
+
+<body ng-app="hotels" ng-class="$state.current.name">
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<ui-view></ui-view>
+
+<img src="app/assets/hotel-background.jpeg" width="0" height="0"/>
+<img src="app/assets/img-background.jpeg" width="0" height="0"/>
+
+<script src="app/core/app.module.js"></script>
+<script src="app/components/hotels/components/hotelList.component.js"></script>
+<script src="app/components/hotels/components/hotel.component.js"></script>
+<script src="app/components/hotels/services/hotelSrv.service.js"></script>
+<script src="app/components/hotels/constants/HOTELS.constant.js"></script>
+<script src="app/components/hotels/filters/brandFilter.filter.js"></script>
+<script src="app/core/app.route.js"></script>
+
+</body>
+</html>
+
+

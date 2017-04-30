@@ -1,0 +1,15 @@
+/.localTmp
+node_modules/
+bower_components/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
+dist/
+.DS_Store
+/fb-bolts/appSecurityRules.txt
+yarn.lock
+.yarnclean
+/.history
+debug.log
+.vscode/

@@ -1,0 +1,66 @@
+.hotel {
+  width: 860px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .hotel h1 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white; }
+  .hotel .buttons-wrapper {
+    float: right;
+    margin-left: 5px;
+    position: relative; }
+    .hotel .buttons-wrapper .back-to-hotel-list, .hotel .buttons-wrapper .save-changes {
+      border-radius: 15px;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      width: 160px;
+      cursor: pointer;
+      font-size: 18px; }
+      .hotel .buttons-wrapper .back-to-hotel-list:hover, .hotel .buttons-wrapper .save-changes:hover {
+        opacity: 0.8; }
+    .hotel .buttons-wrapper .save-changes {
+      color: orange;
+      background-color: #fafafa;
+      z-index: 1; }
+      .hotel .buttons-wrapper .save-changes:active, .hotel .buttons-wrapper .save-changes:focus {
+        outline: none;
+        opacity: 0.9; }
+    .hotel .buttons-wrapper .back-to-hotel-list {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin-bottom: 10px; }
+    .hotel .buttons-wrapper .progress-circular-wrapper {
+      position: absolute;
+      top: 55px;
+      right: 65px; }
+  .hotel .back-to-hotel-list:hover {
+    background-color: rgba(0, 0, 0, 0.6); }
+  .hotel .list-wrapper {
+    overflow-y: scroll;
+    height: 500px; }
+    .hotel .list-wrapper md-list {
+      background-color: #e8e8e8;
+      border-radius: 10px; }
+      .hotel .list-wrapper md-list p.data-type {
+        text-align: center;
+        font-size: 18px;
+        text-decoration: underline; }
+      .hotel .list-wrapper md-list md-list-item::before {
+        min-height: auto; }
+      .hotel .list-wrapper md-list md-list-item .item-data {
+        color: black;
+        font-size: 18px;
+        height: 40px;
+        line-height: 40px; }
+        .hotel .list-wrapper md-list md-list-item .item-data span {
+          color: #006de0; }
+        .hotel .list-wrapper md-list md-list-item .item-data .edit-hotel {
+          float: right; }
+      .hotel .list-wrapper md-list md-list-item .img-wrapper {
+        margin-bottom: 50px; }
+        .hotel .list-wrapper md-list md-list-item .img-wrapper img {
+          width: 100%;
+          height: 100%; }

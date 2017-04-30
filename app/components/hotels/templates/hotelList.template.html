@@ -1,0 +1,57 @@
+<div class="hotel-list">
+
+    <h1>Hotel List</h1>
+
+    <div class="filters-wrapper">
+        <input ng-model="$ctrl.search">
+        <div class="filter-name">City name:</div>
+
+        <select ng-model="$ctrl.selectedBrand">
+            <option value="" disabled selected hidden>ALL</option>
+            <option value="-1">ALL</option>
+            <option ng-repeat="option in $ctrl.brands" value="{{option.val}}">{{option.txt}}</option>
+        </select>
+        <div class="filter-name">Brand name:</div>
+
+
+        <div ng-if="$ctrl.currentView === $ctrl.HOTEL_CONST.VISITED_HOTELS_VIEW"
+             ng-click="$ctrl.changeView($ctrl.HOTEL_CONST.ALL_HOTELS_VIEW)"
+             class="filter-name visited-hotels-button">All Hotels
+        </div>
+        <div ng-if="$ctrl.currentView === $ctrl.HOTEL_CONST.ALL_HOTELS_VIEW"
+             ng-click="$ctrl.changeView($ctrl.HOTEL_CONST.VISITED_HOTELS_VIEW)"
+             class="filter-name visited-hotels-button">Visited Hotels
+        </div>
+    </div>
+
+    <div class="grid-wrapper"
+         ng-class="{'all-hotels-view': $ctrl.currentView === $ctrl.HOTEL_CONST.ALL_HOTELS_VIEW,
+                    'visited-hotels-view': $ctrl.currentView === $ctrl.HOTEL_CONST.VISITED_HOTELS_VIEW}">
+        <div layout="row" class="column-title">
+            <div flex>Name</div>
+            <div flex>City</div>
+            <div flex>Country</div>
+            <div flex>Rating</div>
+            <div flex>Brand</div>
+            <div flex class="column-date-title">Visit Date</div>
+        </div>
+
+        <div class="grid-data">
+            <md-grid-list ng-if="!!$ctrl.hotels" md-row-height="45px" md-cols="6">
+
+                <md-grid-tile
+                        class="animate-repeat"
+                        ng-repeat="hotel in $ctrl.hotels | filter:{name: $ctrl.search} | brandFilter:$ctrl.selectedBrand"
+                        ng-click="$ctrl.hotelClickHnadler(hotel)"
+                        md-colspan="6">
+                    <div><span>{{hotel.name}}</span></div>
+                    <div><span>{{hotel.address.city}}</span></div>
+                    <div><span>{{hotel.address.country}}</span></div>
+                    <div><span>{{hotel.details.starRating.txt}}</span></div>
+                    <div><span>{{hotel.details.brand.txt}}</span></div>
+                    <div class="grid-date-data"><span>{{hotel.time | date:'short'}}</span></div>
+                </md-grid-tile>
+            </md-grid-list>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+.hotel-list {
+  height: 550px;
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .hotel-list h1 {
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4); }
+  .hotel-list .filters-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 5px; }
+    .hotel-list .filters-wrapper input {
+      width: 200px;
+      border-radius: 5px; }
+    .hotel-list .filters-wrapper .filter-name {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      border-radius: 5px;
+      margin-right: 3px;
+      margin-left: 30px;
+      padding: 0 10px; }
+    .hotel-list .filters-wrapper .visited-hotels-button {
+      cursor: pointer; }
+      .hotel-list .filters-wrapper .visited-hotels-button:hover {
+        background-color: rgba(0, 0, 0, 0.6); }
+  .hotel-list .column-title {
+    border-radius: 10px 10px 0 0;
+    height: 35px;
+    background-color: #2c727d;
+    text-align: center;
+    line-height: 30px;
+    padding-right: 9px; }
+    .hotel-list .column-title div {
+      width: 150px;
+      border-right: 1px solid #737373;
+      color: white; }
+  .hotel-list .grid-wrapper .grid-data {
+    height: 400px;
+    overflow-y: scroll;
+    background-color: white; }
+    .hotel-list .grid-wrapper .grid-data md-grid-list {
+      margin: 0 auto;
+      background-color: #aeb9ae; }
+      .hotel-list .grid-wrapper .grid-data md-grid-list md-grid-tile {
+        cursor: pointer; }
+        .hotel-list .grid-wrapper .grid-data md-grid-list md-grid-tile div {
+          font-size: 17px;
+          background-color: darkkhaki;
+          width: 150px;
+          height: 44px;
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+          border-right: 1px solid #737373; }
+          .hotel-list .grid-wrapper .grid-data md-grid-list md-grid-tile div span {
+            max-width: 120px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden; }
+        .hotel-list .grid-wrapper .grid-data md-grid-list md-grid-tile:nth-child(2n) div {
+          background-color: white; }
+        .hotel-list .grid-wrapper .grid-data md-grid-list md-grid-tile:nth-child(2n+1) div {
+          background-color: #cfe2f3; }
+        .hotel-list .grid-wrapper .grid-data md-grid-list md-grid-tile:hover div {
+          opacity: 0.8; }
+    .hotel-list .grid-wrapper .grid-data .grid-date-data {
+      font-size: 14px; }
+  .hotel-list .grid-wrapper.all-hotels-view .column-title .column-date-title {
+    display: none; }
+  .hotel-list .grid-wrapper.all-hotels-view .grid-data .grid-date-data {
+    display: none; }
+  .hotel-list .grid-wrapper.visited-hotels-view .grid-data {
+    pointer-events: none; }
+
+.remove-hotel-or-see-details {
+  font-family: "Lato Regular"; }
+  .remove-hotel-or-see-details .choose-action-title {
+    height: 60px;
+    margin-top: 35px;
+    font-size: 20px;
+    text-align: center; }
+  .remove-hotel-or-see-details .explanation {
+    text-align: center;
+    height: 60px; }
+  .remove-hotel-or-see-details .see-details-btn {
+    color: green; }
+  .remove-hotel-or-see-details .remove-hotel-btn {
+    color: red; }
+
+.example-animate-container {
+  background: white;
+  border: 1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0 10px; }
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  transition: all linear 0.2s; }
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity: 0; }
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity: 1; }
