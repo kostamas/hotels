@@ -13,3 +13,5 @@ yarn.lock
 /.history
 debug.log
 .vscode/
+brands.json
+hotels.json
